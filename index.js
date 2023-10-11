@@ -144,3 +144,22 @@ minimum = Math.min(h, k, l)
 
 
 console.log(minimum)
+
+
+
+//useful String Properties and Methods
+
+
+let phoneNumber = "123-456-7890"
+let userName = "   Bailey Buxton   "
+
+//console.log(userName.length)
+//console.log(userName.charAt(8))
+//console.log(userName.indexOf("B"))
+//console.log(userName.lastIndexOf("B"))
+//userName = userName.trim()
+//userName = userName.toUpperCase()
+
+phoneNumber=phoneNumber.replaceAll("-", "/")
+
+console.log(phoneNumber)
