@@ -1,6 +1,6 @@
 console.log("I like pizza!");
 
-console.log("It's really good!")
+console.log("It's really good!");
 
 //window.alert('I really love Pizza!')
 
@@ -18,9 +18,9 @@ It is composed via a;
 1. Declaration (var, let, const)
 2. Assignment (= assignment operator) */
 
-let firstName = "Bailey";  //string
-let age = 20;  //number
-let student = true;  //booleans
+let firstName = "Bailey"; //string
+let age = 20; //number
+let student = true; //booleans
 
 //Logging Strings and Variables within the console.
 console.log("Hello", firstName);
@@ -31,8 +31,6 @@ console.log("Enrolled:", student);
 document.getElementById("p1").innerHTML = "Hello " + firstName;
 document.getElementById("p2").innerHTML = "You are " + age + " years old.";
 document.getElementById("p3").innerHTML = "Enrolled: " + student;
-
-
 
 /*
 Arithmetic Expressions
@@ -45,25 +43,21 @@ let students = 20;
 let extraStudents = students % 3;
 
 //students = students ** 3
-students += 1;// -= /= *=
+students += 1; // -= /= *=
 
-let result = 1+2 * (3+4);
+let result = 1 + 2 * (3 + 4);
 
-console.log(result)
-
-
+console.log(result);
 
 //How to accept user input
 
 //let username = window.prompt("What's your name?")
 
-document.getElementById("myButton").onclick = function(){
-
-    username = document.getElementById("mytext").value ;
-    console.log(username)
-    document.getElementById("mylabel").innerHTML = "Hello! " + username;
-}
-
+document.getElementById("myButton").onclick = function () {
+  username = document.getElementById("mytext").value;
+  console.log(username);
+  document.getElementById("mylabel").innerHTML = "Hello! " + username;
+};
 
 //Type Conversion
 //The ability to change the data type of a value to another (strings, booleans, numbers)
@@ -83,39 +77,29 @@ let z;
 
 x = Number("3.14");
 y = String(3.14);
-z = Boolean("pizza")
+z = Boolean("pizza");
 
-console.log(x, typeof x)
-console.log(y, typeof y)
-console.log(z, typeof z)
-
-
+console.log(x, typeof x);
+console.log(y, typeof y);
+console.log(z, typeof z);
 
 //const = a variable that cannot be changed.
 
-
-
-
 //radius = window.prompt("Enter the radius of a circle:");
 
-
 //PI = 420.69;
-document.getElementById("myButton2").onclick = function(){
+document.getElementById("myButton2").onclick = function () {
   const PI = 3.14159;
 
   let radius;
   radius = Number(radius);
-  radius = document.getElementById("mytext2").value
-    
+  radius = document.getElementById("mytext2").value;
+
   let circumference;
   circumference = 2 * PI * radius;
 
-
-console.log("The circumference is", circumference);
-}
-
-
-
+  console.log("The circumference is", circumference);
+};
 
 // Math Methods
 
@@ -134,24 +118,18 @@ let minimum;
 //h = Math.sqrt(h);
 //h = Math.abs(h);
 
-
 h = Math.PI;
 
+maximum = Math.max(h, k, l);
 
-maximum = Math.max(h, k, l)
+minimum = Math.min(h, k, l);
 
-minimum = Math.min(h, k, l)
-
-
-console.log(minimum)
-
-
+console.log(minimum);
 
 //useful String Properties and Methods
 
-
-let phoneNumber = "123-456-7890"
-let userName = "   Bailey Buxton   "
+let phoneNumber = "123-456-7890";
+let userName = "   Bailey Buxton   ";
 
 //console.log(userName.length)
 //console.log(userName.charAt(8))
@@ -160,6 +138,6 @@ let userName = "   Bailey Buxton   "
 //userName = userName.trim()
 //userName = userName.toUpperCase()
 
-phoneNumber=phoneNumber.replaceAll("-", "/")
+phoneNumber = phoneNumber.replaceAll("-", "/");
 
-console.log(phoneNumber)
+console.log(phoneNumber);
