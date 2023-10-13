@@ -19,17 +19,17 @@ It is composed via a;
 2. Assignment (= assignment operator) */
 
 let firstName = "Bailey"; //string
-let age = 20; //number
+//let age = 20; //number
 let student = true; //booleans
 
 //Logging Strings and Variables within the console.
 console.log("Hello", firstName);
-console.log("You are", age, "years old.");
+//console.log("You are", age, "years old.");
 console.log("Enrolled:", student);
 
 //Get ElementbyID allows you to edit / Concatenate / fill elements with unique identifiers.
 document.getElementById("p1").innerHTML = "Hello " + firstName;
-document.getElementById("p2").innerHTML = "You are " + age + " years old.";
+//document.getElementById("p2").innerHTML = "You are " + age + " years old.";
 document.getElementById("p3").innerHTML = "Enrolled: " + student;
 
 /*
@@ -137,7 +137,119 @@ let userName = "   Bailey Buxton   ";
 //console.log(userName.lastIndexOf("B"))
 //userName = userName.trim()
 //userName = userName.toUpperCase()
+//userName = userName.toLowerCase()
 
 phoneNumber = phoneNumber.replaceAll("-", "/");
 
 console.log(phoneNumber);
+
+// String Slicing
+//Extracts a section of a string and returns it as a new string without modifying the string.
+let fullName = "Bailey Buxton";
+let fName;
+let lName;
+
+//fName = fullName.slice(0, 6);
+//lName = fullName.slice(7);4888
+
+fName = fullName.slice(0, fullName.indexOf(" "));
+
+lName = fullName.slice(fullName.indexOf(" ") + 1);
+
+console.log(fName);
+console.log(lName);
+
+// Method Chaining = calling one methhhod after anothhher in one line of code.
+
+let myName = "bailey";
+
+let letter = myName
+  .charAt(0)
+  .toUpperCase()
+  .trim()
+  .concat(" is the first letter");
+
+console.log(letter);
+
+// If and Else statements = If something is true, do it, else dont this instead
+
+/*
+let age = 65;
+
+if(age >= 65){
+  console.log("You are a senior citizen")
+}
+else if (age >= 18){
+
+console.log("You are an adult")
+}
+else if(age < 0){
+  console.log("You havent been born yet!")
+}
+
+else{
+  console.log('You are a child')
+}
+*/
+
+let online = true;
+if (online) {
+  console.log("You are online!");
+} else {
+  console.log("You are offline!");
+}
+
+//Checked Function
+
+document.getElementById("cbsubmit").onclick = function () {
+  //if (document.getElementById("checkbox").checked) {
+
+  const subcheckbox = document.getElementById("checkbox");
+
+  if (subcheckbox.checked) {
+    console.log("You are subscribed!");
+  } else {
+    console.log("You are NOT subscribed!");
+  }
+};
+
+const visaBtn = document.getElementById("visaBtn");
+const mastercardBtn = document.getElementById("mastercardBtn");
+const paypalBtn = document.getElementById("paypalBtn");
+document.getElementById("paybtn").onclick = function () {
+  if (visaBtn.checked) {
+    console.log("You are paying with a Visa card!");
+  } else if (mastercardBtn.checked) {
+    console.log("You are paying with a Mastercard!");
+  } else if (paypalBtn.checked) {
+    console.log("You are paying through Paypal!");
+  } else {
+    console.log("You must select a payment option.");
+  }
+};
+
+//Switch = statement that examines a value for a match against many case caluses. More effecient than many if else statements.
+
+document.getElementById("checkgrade").onclick = function () {
+  let grade = document.getElementById("grade").value;
+
+  switch (grade) {
+    case "A":
+      console.log("You did great!");
+      break;
+    case "B":
+      console.log("You did good!");
+      break;
+    case "C":
+      console.log("You did okay!");
+      break;
+    case "D":
+      console.log("You passed... barely!");
+      break;
+    case "F":
+      console.log("You FAILED!");
+      break;
+    default:
+      console.log(grade, "is not a letter grade between A-D or F");
+  }
+};

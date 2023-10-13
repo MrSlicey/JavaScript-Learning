@@ -1,41 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JavaScript Learning</title>
-    <link rel="stylesheet" href="style.css"/>
-    
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <!--P tags for GetElementByID Exercise.-->
     <p id="p1"></p>
     <p id="p2"></p>
     <p id="p3"></p>
-    <label id="mylabel">Enter your name:</label><br>
-    <input type="text" id="mytext"><br>
+    <label id="mylabel">Enter your name:</label><br />
+    <input type="text" id="mytext" /><br />
     <button type="button" id="myButton">submit</button>
-<br>
-    <label id="mylabel2">Enter the circles Radius:</label><br>
-    <input type="text" id="mytext2"><br>
+    <br />
+    <label id="mylabel2">Enter the circles Radius:</label><br />
+    <input type="text" id="mytext2" /><br />
     <button type="button" id="myButton2">Calculate</button>
+    <br />
+    <label for="checkbox">Subscribe</label>
 
-    <script src="index.js">
-    </script>
-<br>
+    <input type="checkbox" id="checkbox" />
+    <button id="cbsubmit">submit</button>
+    <br /><br />
 
+    <label for="visaBtn">Visa</label>
+    <input type="radio" name="card" id="visaBtn" />
+    <label for="mastercardBtn">Mastercard</label>
+    <input type="radio" name="card" id="mastercardBtn" />
+    <label for="paypalBtn">Paypal</label>
+    <input type="radio" name="card" id="paypalBtn" />
+    <button id="paybtn">Payment Type</button>
+    <br />
+    <br />
+    <label for="grade">Grade:</label>
+    <input type="text" id="grade" maxlength="1" />
+    <button id="checkgrade">Check Grade</button>
+    <script src="index.js"></script>
+    <br />
 
-<!-- Hypotenuse Calculator -->
-<div class="individual">
-<script src="hypotenuse-calc.js"></script>
-<h1>Hypotenuse Calculator!</h1>
-<label>Enter Side A:</label>
-    <input type="number" min="0" id="side-a"/>
-    <br>
-    <label>Enter Side B:</label>
-    <input type="number" min="0" id="side-b"/><br>
-    <button id="calc">Caluclate</button>
-    <h3 id="hypot"></h3>
-</div>
-</body>
+    <!-- Hypotenuse Calculator -->
+    <div class="individual">
+      <script src="hypotenuse-calc.js"></script>
+      <h1>Hypotenuse Calculator!</h1>
+      <label>Enter Side A:</label>
+      <input type="number" min="0" id="side-a" />
+      <br />
+      <label>Enter Side B:</label>
+      <input type="number" min="0" id="side-b" /><br />
+      <button id="calc">Caluclate</button>
+      <h3 id="hypot"></h3>
+    </div>
+  </body>
 </html>
