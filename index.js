@@ -233,23 +233,67 @@ document.getElementById("paybtn").onclick = function () {
 document.getElementById("checkgrade").onclick = function () {
   let grade = document.getElementById("grade").value;
 
-  switch (grade) {
-    case "A":
-      console.log("You did great!");
+  switch (true) {
+    case grade >=90:
+      console.log("You scored a A, You did great!");
       break;
-    case "B":
-      console.log("You did good!");
+    case grade >=80:
+      console.log("You scored a B, You did good!");
       break;
-    case "C":
-      console.log("You did okay!");
+    case grade >=70:
+      console.log("You scored a C, You did okay!");
       break;
-    case "D":
-      console.log("You passed... barely!");
+    case grade >=60:
+      console.log("You scored a D, You passed... barely!");
       break;
-    case "F":
-      console.log("You FAILED!");
+    case grade < 60:
+      console.log("You scored a F, You FAILED!");
       break;
     default:
-      console.log(grade, "is not a letter grade between A-D or F");
+      console.log(grade, "is not a value between 0-100.");
   }
 };
+
+
+//Strict Equality Operator, Chekcs is two values are equal as well as their data type.
+// = ASSIGNMENT OPERATOR       == COMPARISON(NOT DATA TYPE)    ===    STRICT(DATA TYPE TOO)
+
+let o = "3.14";
+
+if(o === 3.14){
+  console.log("that is Pi")
+}
+else{
+  console.log("that is not Pi -L261");
+}
+
+
+
+
+// && (AND) ||(OR) Logical Operators, Checks more than one condition concurrently
+// && AND Both condiitons must be true
+// || OR Either condition may be true.
+let temp = -15;
+
+//if(temp > 0 && temp < 30){
+//  console.log("The weather is good!")
+//}
+
+if(temp <= 0 || temp >= 30){
+ console.log("The weather is good!")
+}
+else{
+  console.log("The weather is bad!")
+}
+
+//! not logical operator, used to reverse a conditions boolean value
+//true->false false->true
+
+let height = -50;
+
+if(!(height > 0)){
+  console.log("Youre super Short! L292");
+}
+else{
+  console.log("Youre super tall!");
+}
