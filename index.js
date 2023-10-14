@@ -234,16 +234,16 @@ document.getElementById("checkgrade").onclick = function () {
   let grade = document.getElementById("grade").value;
 
   switch (true) {
-    case grade >=90:
+    case grade >= 90:
       console.log("You scored a A, You did great!");
       break;
-    case grade >=80:
+    case grade >= 80:
       console.log("You scored a B, You did good!");
       break;
-    case grade >=70:
+    case grade >= 70:
       console.log("You scored a C, You did okay!");
       break;
-    case grade >=60:
+    case grade >= 60:
       console.log("You scored a D, You passed... barely!");
       break;
     case grade < 60:
@@ -254,21 +254,16 @@ document.getElementById("checkgrade").onclick = function () {
   }
 };
 
-
 //Strict Equality Operator, Chekcs is two values are equal as well as their data type.
 // = ASSIGNMENT OPERATOR       == COMPARISON(NOT DATA TYPE)    ===    STRICT(DATA TYPE TOO)
 
 let o = "3.14";
 
-if(o === 3.14){
-  console.log("that is Pi")
-}
-else{
+if (o === 3.14) {
+  console.log("that is Pi");
+} else {
   console.log("that is not Pi -L261");
 }
-
-
-
 
 // && (AND) ||(OR) Logical Operators, Checks more than one condition concurrently
 // && AND Both condiitons must be true
@@ -279,21 +274,62 @@ let temp = -15;
 //  console.log("The weather is good!")
 //}
 
-if(temp <= 0 || temp >= 30){
- console.log("The weather is good!")
-}
-else{
-  console.log("The weather is bad!")
+if (temp <= 0 || temp >= 30) {
+  console.log("The weather is good!");
+} else {
+  console.log("The weather is bad!");
 }
 
 //! not logical operator, used to reverse a conditions boolean value
 //true->false false->true
 
 let height = -50;
+let shoes = true;
 
-if(!(height > 0)){
+if (!(height > 0)) {
   console.log("Youre super Short! L292");
-}
-else{
+} else {
   console.log("Youre super tall!");
 }
+
+if (shoes) {
+  console.log("This was taken without shoes on!");
+} else {
+  console.log("This was taken with shoes on and has a variance of 5cm");
+}
+
+// While loop =  repeat some code while some condition is true potentially infinite times.
+
+//Do While Loop = a do while loop does a command then checks a condition, if the coniditon is true then the loop repeats until the condition is false.
+
+//let Name;
+//do {
+//Name = window.prompt("Enter Your name!");
+//} while (Name == "" || Name == null);
+//console.log("Hello " + Name);
+
+//for loop = completes some code for a certain amount of times.
+
+for (let i = 1; i <= 10; i++) {
+  console.log(i, "Missisippi");
+}
+
+//Functions; define code once but call it many times, call the code to perform the function
+//let birthdayPerson = "Bailey";
+//let BirthdayAge = 21;
+//let why;
+
+//why = happyBirthday();
+//console.log(why);
+
+function happyBirthday(birthdayPerson, birthdayAge) {
+  for (let i = 0; i <= 2; i++) {
+    console.log("Happy birthday to you!");
+  }
+  console.log("Happy birthday dear", birthdayPerson + "!");
+  console.log("Happy birthday to you!");
+  console.log("You are " + birthdayAge + " years old!");
+}
+document.getElementById("hbday").onclick = function () {
+  happyBirthday("Bailey", 21);
+};
