@@ -49,6 +49,8 @@ document.getElementById("scissors").onclick = function () {
 let rock = 1;
 let paper = 2;
 let scissors = 3;
+let playerWins = 0;
+let botWins = 0;
 
 document.getElementById("scissors").onclick = function(){
     playRPS(scissors);
@@ -71,26 +73,38 @@ function playRPS(userChoice) {
   case userChoice === rock && botChoice === paper: 
     document.getElementById("winLog").textContent =
       ("The bot chose PAPER! You LOSE!");
+    botWins = botWins + 1;
+    document.getElementById("botWins").innerHTML = ("Bot Wins: " + botWins)
   break;
   case userChoice === rock && botChoice === scissors: 
     document.getElementById("winLog").textContent =
-      ("The bot chose SCISSORS! You WI!");
+      ("The bot chose SCISSORS! You WIN!");
+      playerWins = playerWins + 1;
+      document.getElementById("playerWins").innerHTML = ("Player Wins: " + playerWins)
   break;
   case userChoice === paper && botChoice === rock: 
     document.getElementById("winLog").textContent =
       ("The bot chose ROCK! You WIN!");
+      playerWins = playerWins + 1;
+      document.getElementById("playerWins").innerHTML = ("Player Wins: " + playerWins)
   break;
   case userChoice === paper && botChoice === scissors: 
     document.getElementById("winLog").textContent =
       ("The bot chose SCISSORS! You LOSE!");
+      botWins = botWins + 1;
+    document.getElementById("botWins").innerHTML = ("Bot Wins: " + botWins)
   break;
   case userChoice === scissors && botChoice === rock: 
     document.getElementById("winLog").textContent =
       ("The bot chose ROCK! You LOSE!");
+      botWins = botWins + 1;
+    document.getElementById("botWins").innerHTML = ("Bot Wins: " + botWins)
   break;
   case userChoice === scissors && botChoice === paper: 
     document.getElementById("winLog").textContent =
       ("The bot chose PAPER! You WIN!");
+      playerWins = playerWins + 1;
+    document.getElementById("playerWins").innerHTML = ("Player Wins: " + playerWins)
   break;
 }
 console.log("The Bot Chose:", botChoice, "The Player Chose:", userChoice)
