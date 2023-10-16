@@ -52,60 +52,62 @@ let scissors = 3;
 let playerWins = 0;
 let botWins = 0;
 
-document.getElementById("scissors").onclick = function(){
-    playRPS(scissors);
-}
-document.getElementById("paper").onclick = function(){
-    playRPS(paper);
-}
-document.getElementById("rock").onclick = function(){
-    playRPS(rock);
-}
-
+document.getElementById("scissors").onclick = function () {
+  playRPS(scissors);
+};
+document.getElementById("paper").onclick = function () {
+  playRPS(paper);
+};
+document.getElementById("rock").onclick = function () {
+  playRPS(rock);
+};
 
 function playRPS(userChoice) {
-  let botChoice = Math.floor(Math.random()*3 + 1)
-    switch (true) { 
-  case userChoice === botChoice: 
-    document.getElementById("winLog").textContent =
-      ("You and the bot had the same choice! You tied!");
-  break;
-  case userChoice === rock && botChoice === paper: 
-    document.getElementById("winLog").textContent =
-      ("The bot chose PAPER! You LOSE!");
-    botWins = botWins + 1;
-    document.getElementById("botWins").innerHTML = ("Bot Wins: " + botWins)
-  break;
-  case userChoice === rock && botChoice === scissors: 
-    document.getElementById("winLog").textContent =
-      ("The bot chose SCISSORS! You WIN!");
-      playerWins = playerWins + 1;
-      document.getElementById("playerWins").innerHTML = ("Player Wins: " + playerWins)
-  break;
-  case userChoice === paper && botChoice === rock: 
-    document.getElementById("winLog").textContent =
-      ("The bot chose ROCK! You WIN!");
-      playerWins = playerWins + 1;
-      document.getElementById("playerWins").innerHTML = ("Player Wins: " + playerWins)
-  break;
-  case userChoice === paper && botChoice === scissors: 
-    document.getElementById("winLog").textContent =
-      ("The bot chose SCISSORS! You LOSE!");
-      botWins = botWins + 1;
-    document.getElementById("botWins").innerHTML = ("Bot Wins: " + botWins)
-  break;
-  case userChoice === scissors && botChoice === rock: 
-    document.getElementById("winLog").textContent =
-      ("The bot chose ROCK! You LOSE!");
-      botWins = botWins + 1;
-    document.getElementById("botWins").innerHTML = ("Bot Wins: " + botWins)
-  break;
-  case userChoice === scissors && botChoice === paper: 
-    document.getElementById("winLog").textContent =
-      ("The bot chose PAPER! You WIN!");
-      playerWins = playerWins + 1;
-    document.getElementById("playerWins").innerHTML = ("Player Wins: " + playerWins)
-  break;
-}
-console.log("The Bot Chose:", botChoice, "The Player Chose:", userChoice)
+  let botChoice = Math.floor(Math.random() * 3 + 1);
+  switch (true) {
+    case userChoice === botChoice:
+      document.getElementById("winLog").textContent =
+        "You and the bot had the same choice! You tied!";
+      break;
+    case userChoice === rock && botChoice === paper:
+      document.getElementById("winLog").textContent =
+        "The bot chose PAPER! You LOSE!";
+      botWins++;
+      document.getElementById("botWins").innerHTML = "Bot Wins: " + botWins;
+      break;
+    case userChoice === rock && botChoice === scissors:
+      document.getElementById("winLog").textContent =
+        "The bot chose SCISSORS! You WIN!";
+      playerWins++;
+      document.getElementById("playerWins").innerHTML =
+        "Player Wins: " + playerWins;
+      break;
+    case userChoice === paper && botChoice === rock:
+      document.getElementById("winLog").textContent =
+        "The bot chose ROCK! You WIN!";
+      playerWins++;
+      document.getElementById("playerWins").innerHTML =
+        "Player Wins: " + playerWins;
+      break;
+    case userChoice === paper && botChoice === scissors:
+      document.getElementById("winLog").textContent =
+        "The bot chose SCISSORS! You LOSE!";
+      botWins++;
+      document.getElementById("botWins").innerHTML = "Bot Wins: " + botWins;
+      break;
+    case userChoice === scissors && botChoice === rock:
+      document.getElementById("winLog").textContent =
+        "The bot chose ROCK! You LOSE!";
+      botWins++;
+      document.getElementById("botWins").innerHTML = "Bot Wins: " + botWins;
+      break;
+    case userChoice === scissors && botChoice === paper:
+      document.getElementById("winLog").textContent =
+        "The bot chose PAPER! You WIN!";
+      playerWins++;
+      document.getElementById("playerWins").innerHTML =
+        "Player Wins: " + playerWins;
+      break;
+  }
+  console.log("The Bot Chose:", botChoice, "The Player Chose:", userChoice);
 }
